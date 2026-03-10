@@ -1,0 +1,83 @@
+.active-filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.active-filters.empty {
+  opacity: 0.7;
+}
+
+.no-filters {
+  font-size: 0.95rem;
+  color: #95a5a6;
+}
+
+.active-filters-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #f0f0f0;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  gap: 8px;
+}
+
+.remove-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #95a5a6;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.remove-tag:hover {
+  color: #e74c3c;
+}
+
+.clear-all {
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.2s;
+}
+
+.clear-all:hover {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .active-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filter-tags {
+    width: 100%;
+  }
+}

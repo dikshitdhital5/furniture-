@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 10001;
+  z-index: 999999; /* Extremely high to be above everything */
   animation: fadeIn 0.3s ease;
 }
 
@@ -22,7 +22,7 @@
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  z-index: 10002;
+  z-index: 1000000; /* Even higher than overlay */
   animation: slideUp 0.3s ease;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
@@ -39,13 +39,13 @@
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  color: #333; 
+  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  z-index: 10003;
+  z-index: 1000001; /* Highest of all */
 }
 
 .quickview-close:hover {

@@ -4,11 +4,14 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import CartDrawer from '../Cart/CartDrawer';
 import { useCart } from '../../context/CartContext';
+import SearchModal from '../Search/SearchModal';
+import { useSearch } from '../../context/SearchContext';
 import './Layout.css';
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const { isCartOpen, setIsCartOpen } = useCart();
+    const { isSearchOpen, setIsSearchOpen } = useSearch();
 
 
   console.log('Layout rendering, isCartOpen:', isCartOpen);
@@ -69,6 +72,10 @@ const Layout = ({ children }) => {
         isOpen={isCartOpen} 
         onClose={() => setIsCartOpen(false)} 
       />
+
+       {/* Search Modal */}
+      <SearchModal />
+      
 
       {/* Overlay when cart is open */}
       {isCartOpen && (
