@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import Layout from './components/Layout/Layout';
 import { SearchProvider } from './context/SearchContext';
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Home from './pages/Home/Home';
 import Products from './pages/Products/Products';
 import Login from './pages/Login/Login';
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/product/:id" element={<ProductDetails />} />
               {/* Add more routes here as you create them */}
             </Routes>
           </Layout>

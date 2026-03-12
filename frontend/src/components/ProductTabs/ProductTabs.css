@@ -1,0 +1,272 @@
+.product-tabs {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  color: #2c3e50;
+  background: white;
+}
+
+.tab-button.active {
+  color: #2c3e50;
+  border-bottom-color: #2c3e50;
+  background: white;
+}
+
+.tabs-content {
+  padding: 40px;
+}
+
+/* Description Tab */
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a6a7a;
+  margin-bottom: 30px;
+}
+
+.features-list h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.features-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 10px 0 10px 25px;
+  position: relative;
+  color: #5a6a7a;
+}
+
+.features-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Specifications Tab */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table td {
+  padding: 15px;
+}
+
+.spec-label {
+  width: 200px;
+  font-weight: 500;
+  color: #2c3e50;
+  background: #f8f9fa;
+}
+
+.spec-value {
+  color: #5a6a7a;
+}
+
+/* Reviews Tab */
+.reviews-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.big-rating {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.total-reviews {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.write-review-btn {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #2c3e50;
+  border-radius: 6px;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.write-review-btn:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.review-item {
+  padding: 25px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.review-date {
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #f39c12;
+}
+
+.verified-badge {
+  background: #27ae60;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.review-title {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.review-comment {
+  color: #5a6a7a;
+  line-height: 1.6;
+}
+
+/* Shipping Tab */
+.shipping-info h4 {
+  color: #2c3e50;
+  margin: 20px 0 10px;
+}
+
+.shipping-info h4:first-child {
+  margin-top: 0;
+}
+
+.shipping-info p {
+  color: #5a6a7a;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.shipping-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shipping-info li {
+  padding: 8px 0;
+  color: #5a6a7a;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.shipping-info li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabs-header {
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    flex: 1 1 auto;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .tabs-content {
+    padding: 20px;
+  }
+
+  .reviews-summary {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .average-rating {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .specs-table td {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .spec-label {
+    background: none;
+    font-weight: 600;
+    padding-bottom: 0;
+  }
+}

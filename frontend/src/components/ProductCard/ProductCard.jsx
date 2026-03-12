@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useCart } from '../../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 import QuickView from '../QuickView/QuickView';
 import './ProductCard.css';
 
 const ProductCard = ({ product, onAddToCart }) => {
+  const navigate = useNavigate();
   const { addToCart } = useCart();
   const [showQuickView, setShowQuickView] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -19,6 +21,10 @@ const ProductCard = ({ product, onAddToCart }) => {
     isNew,
     stock
   } = product;
+
+   const handleCardClick = () => {
+    navigate(`/product/${id}`); // Navigate to product details page
+  };
 
   const handleAddToCart = (e) => {
     e.preventDefault();

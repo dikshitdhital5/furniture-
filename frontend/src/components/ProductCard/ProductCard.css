@@ -1,4 +1,5 @@
 .product-card {
+  cursor: pointer;
   position: relative;
   background: white;
   border-radius: 12px;
